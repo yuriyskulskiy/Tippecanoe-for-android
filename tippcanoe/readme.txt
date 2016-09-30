@@ -26,21 +26,35 @@ How to import for nubes:
 
 
   4) (this step is not necessary if step 0 has been done in order)  Android.mk is located in tippcanoe/src/main/jni :
-    There are different ways to run ndk build:
+      There are different ways to run ndk build:
       via creaing ndk-build  comand in external tools panel:
+      
      -  creating ndk-build command:
+     
          go to-> androidstudio ->preferenses;
+         
           select: tools->external tools;
+          
           press "+"
+          
           fill the form:
-         name = anyname (ndk-build-tippecanoe as example)
+       
+       name = anyname (ndk-build-tippecanoe as example)
+       
          discription = any discription
-         Group: NDK   or any name
+         
+         Group = NDK   or any name
+         
          program = path to ndk-buld
+         
             example  = /Users/yuriy/Library/Android/sdk/ndk-bundle/ndk-build
+            
          parameters - empty // to make clean command put parameter =  clean
+         
          working directory = $ProjectFileDir$/tippcanoe/src/main
+         
      - creating ndk clean command:
+     
         do al previous step (creating ndk-build command:) but parameters has to be = clean
 
    5) to invoke ndk-build command

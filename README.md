@@ -1,4 +1,3 @@
-# Tippecanoe-for-android
 How to import for nubes:
  0) run ndk-build in the tippecanoe project (not nessesary)
 
@@ -7,7 +6,7 @@ How to import for nubes:
        -Specify this tippcanoe project(Korean) as a sourse directory
 
  2)  fix gradle problems
-      - go settings.gradle -  modify first line:
+      - go to settings.gradle -  modify first line:
        include ':tippcanoe',':nameOfYourMainModules' ...
 
       - enssure that in tippcanoe build.gradle first line - instead of: apply plugin: 'com.android.application'
@@ -26,22 +25,36 @@ How to import for nubes:
       - sync gradle
 
 
-  4) (this step is not nessesary if step 0 has been done in order)  Android.mk is located in tippcanoe/src/main/jni :
-    There different ways to run ndk build:
-      via creaing ndk-build  comand inexternal tools panel:
+  4) (this step is not necessary if step 0 has been done in order)  Android.mk is located in tippcanoe/src/main/jni :
+      There are different ways to run ndk build:
+      via creaing ndk-build  comand in external tools panel:
+      
      -  creating ndk-build command:
+     
          go to-> androidstudio ->preferenses;
+         
           select: tools->external tools;
+          
           press "+"
+          
           fill the form:
-         name = anyname (ndk-build-tippecanoe as example)
+       
+       name = anyname (ndk-build-tippecanoe as example)
+       
          discription = any discription
-         Group: NDK   or any name
+         
+         Group = NDK   or any name
+         
          program = path to ndk-buld
+         
             example  = /Users/yuriy/Library/Android/sdk/ndk-bundle/ndk-build
+            
          parameters - empty // to make clean command put parameter =  clean
+         
          working directory = $ProjectFileDir$/tippcanoe/src/main
+         
      - creating ndk clean command:
+     
         do al previous step (creating ndk-build command:) but parameters has to be = clean
 
    5) to invoke ndk-build command
